@@ -1,0 +1,53 @@
+.background {
+    -fx-background-color: linear-gradient(to top, #1142AA, #4573D5);
+}
+
+/* Внутренний HBox */
+.inner-box {
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+/* Прогнозная VBox */
+.info-box {
+    -fx-background-color: #2A4580; /* Белый фон */
+    -fx-padding: 10; /* Внутренние отступы */
+    -fx-border-radius: 10; /* Скругленные края */
+    -fx-background-radius: 10; /* Скругление фона */
+    -fx-alignment: center; /* Центрирование содержимого */
+}
+
+/* Стиль для текста прогнозов */
+.label {
+    -fx-font-family: Lato;
+    -fx-text-fill: #EBEBEB;
+}
+
+.button {
+    -fx-background-color: #2A4580; /* Белый цвет фона */
+    -fx-text-fill: #EBEBEB; /* Черный цвет текста */
+    -fx-background-radius: 15; /* Закругленные края */
+    -fx-padding: 10 20; /* Внутренние отступы */
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-font-family: Lato; /* Шрифт текста */
+    -fx-border-color: #d3d3d3; /* Светло-серый цвет рамки */
+    -fx-border-width: 1; /* Толщина рамки */
+    -fx-border-radius: 15; /* Закругленные края для рамки */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 3); /* Тень */
+    -fx-cursor: hand; /* Указатель при наведении */
+    -fx-transition: all 0.3s ease-in-out; /* Плавные переходы */
+}
+
+/* Эффект при наведении */
+.button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-background-color: #32497c; /* Светло-серый цвет фона */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 12, 0, 0, 4); /* Усиленная тень */
+}
+
+/* Эффект при нажатии */
+.button:pressed {
+    -fx-background-color: #e0e0e0; /* Более темный серый */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 6, 0, 0, 2); /* Уменьшенная тень */
+}

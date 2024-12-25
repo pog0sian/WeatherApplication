@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane fx:controller="org.example.weatherapp.MainController"
+            xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" stylesheets="@css/styles.css" styleClass="background">
+      <left>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20" prefWidth="200">
+          <Button fx:id="cityNameButton" layoutX="20" layoutY="60" onAction="#changeCity" style="-fx-font-family: Lato" styleClass="button"/>
+          <ImageView fx:id="weatherIcon" fitWidth="100" fitHeight="100" preserveRatio="true"/>
+          <Label fx:id="temperatureLabel" layoutX="20" layoutY="100" style="-fx-font-size: 32; -fx-font-family: Lato"/>
+          <Label fx:id="descriptionLabel" layoutX="20" layoutY="140" style="-fx-font-family: Lato"/>
+        </VBox>
+      </left>
+
+
+      <center>
+         <VBox style="-fx-background-color: linear-gradient(to top, #06266F, #0d2d71)">
+            <HBox spacing="20" styleClass="inner-box">
+
+                <VBox spacing="10" alignment="CENTER" HBox.hgrow="ALWAYS" styleClass="info-box">
+                  <Label fx:id="dateLabel1" style="-fx-font-family: Lato"/>
+                    <ImageView fx:id="weatherIcon1" fitHeight="40" fitWidth="40" preserveRatio="true"/>
+                  <Label fx:id="forecastTemperatureLabel1" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER" HBox.hgrow="ALWAYS" styleClass="info-box">
+                    <Label fx:id="dateLabel2" style="-fx-font-family: Lato"/>
+                    <ImageView fx:id="weatherIcon2" fitHeight="40" fitWidth="40" preserveRatio="true"/>
+                    <Label fx:id="forecastTemperatureLabel2" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER" HBox.hgrow="ALWAYS" styleClass="info-box">
+                    <Label fx:id="dateLabel3" style="-fx-font-family: Lato"/>
+                    <ImageView fx:id="weatherIcon3" fitHeight="40" fitWidth="40" preserveRatio="true"/>
+                    <Label fx:id="forecastTemperatureLabel3" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER" HBox.hgrow="ALWAYS" styleClass="info-box">
+                    <Label fx:id="dateLabel4" style="-fx-font-family: Lato"/>
+                    <ImageView fx:id="weatherIcon4" fitHeight="40" fitWidth="40" preserveRatio="true"/>
+                    <Label fx:id="forecastTemperatureLabel4" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+
+                <effect>
+                    <DropShadow color="#00000033"/>
+                </effect>
+
+            </HBox>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <GridPane hgap="20" vgap="20" styleClass="inner-box">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                    <ColumnConstraints hgrow="ALWAYS" />
+                </columnConstraints>
+
+                <rowConstraints>
+                    <RowConstraints vgrow="ALWAYS" />
+                </rowConstraints>
+                <effect>
+                    <DropShadow color="#00000033"/>
+                </effect>
+
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="info-box">
+                    <Label text="Мин. температура" styleClass="label"/>
+                    <Label fx:id="minTempLabel" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="info-box">
+                    <Label text="По ощущениям" styleClass="label"/>
+                    <Label fx:id="feelsLikeLabel" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="info-box">
+                    <Label text="Ветер" styleClass="label"/>
+                    <Label fx:id="windSpeedLabel" styleClass="label"/>
+                    <Label fx:id="windDirectionLabel" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="info-box">
+                    <Label text="Видимость" styleClass="label"/>
+                    <Label fx:id="visibilityLabel" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+
+                <VBox GridPane.columnIndex="2" GridPane.rowIndex="1" styleClass="info-box">
+                    <Label text="Давление" styleClass="label"/>
+                    <Label fx:id="pressureLabel" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+
+                <VBox GridPane.columnIndex="2" GridPane.rowIndex="2" styleClass="info-box">
+                    <Label text="Влажность" styleClass="label"/>
+                    <Label fx:id="humidityLabel" styleClass="label"/>
+                    <effect>
+                        <DropShadow color="#00000033"/>
+                    </effect>
+                </VBox>
+            </GridPane>
+         </VBox>
+      </center>
+</BorderPane>

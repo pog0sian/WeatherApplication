@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="org.example.weatherapp.CitySearchController"
+      xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER"
+      xmlns="http://javafx.com/javafx/8" stylesheets="@css/styles.css" spacing="20" styleClass="background">
+    <Label text="Введите город" style="-fx-font-size: 24" styleClass="label"/>
+    <ComboBox fx:id="cityComboBox" prefWidth="300" editable="true" />
+    <Button text="Продолжить" styleClass="button" onAction="#switchToMainScene"/>
+</VBox>
